@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap");
+
 main {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  max-width: 935px;
+  max-width: 940px;
   /* background-color: red; */
   display: flex;
   flex-direction: column;
@@ -24,7 +28,8 @@ top {
 
 .top-right p {
   margin-right: 50px;
-  /* font-family: Noto Sans; */
+  margin-bottom: 30px;
+  font-family: Noto Sans, sans-serif;
   font-size: 50px;
   font-weight: 700;
   text-align: center;
@@ -47,21 +52,27 @@ letters {
   border: 1px solid #7aa7c7;
   width: 40px;
   height: 40px;
-  /* font-family: "Roboto"; */
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   text-align: center;
   color: #39739d;
   background: #e1ecf4;
+  border-radius: 3px;
 }
+.disabled {
+  background-color: #9faab5;
+  color: #798a9f;
+}
+
 .guess {
   margin-top: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   /* background-color: lightblue; */
-  /* font-family: Roboto; */
+  font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
@@ -83,19 +94,17 @@ letters {
   background: #e1ecf4;
   border: 1px solid #7aa7c7;
   border-radius: 3px;
-  /* font-family: Roboto; */
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
-  color: #3C76A1;
-
+  color: #3c76a1;
 }
 .img-forca img {
   width: 400px;
 }
 
 .chooseWord {
-
   background-color: #27ae60;
   color: white;
   width: 200px;
@@ -103,9 +112,9 @@ letters {
   margin-top: 30px;
   margin-right: 50px;
   border-radius: 8px;
-  /* font-family: Roboto; */
+  font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  border:none;
+  border: none;
 }
