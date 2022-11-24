@@ -1,14 +1,28 @@
 
-export default function Jogo() {
+
+export default function Jogo(props) {
+  
+  function escolhePalavra(array){
+    let randomElement = array[Math.floor(Math.random() * array.length)];
+    console.log(randomElement)
+    let numChar = randomElement.length
+    console.log(numChar)
+    let palavraArray= Array(numChar).fill('_')
+    {props.setPalavra(palavraArray.join(' '))}
+    {props.setLetraEstado('')}
+  }
+
+
+
   return (
-    <top>
+    <div className="top">
       <div className="img-forca">
         <img src="assets/forca0.png"></img>
       </div>
       <div className="top-right">
-        <button className="chooseWord">Escolher Palavra</button>
-        <p>_ _ _ _ _ _ _</p>
+        <button onClick={()=> escolhePalavra(props.palavrasArr)} className="botao-palavra">Escolher Palavra</button>
+        <p>{props.palavra}</p>
       </div>
-    </top>
+    </div>
   );
 }

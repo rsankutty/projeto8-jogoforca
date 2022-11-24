@@ -1,4 +1,4 @@
-export default function Letras() {
+export default function Letras(props) {
   const lettersArr = [
     "A",
     "B",
@@ -29,12 +29,12 @@ export default function Letras() {
   ];
 
   return (
-    <bottom>
-      <letters>
+    <div className="bottom">
+      <div className="letters">
         {lettersArr.map((item) => (
-          <button className="letter disabled">{item}</button>
+          <button className={`letter ${props.letraEstado}`} >{item}</button>
         ))}
-      </letters>
-    </bottom>
+      </div>
+    </div>
   );
 }
