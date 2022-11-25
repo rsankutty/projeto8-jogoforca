@@ -25,7 +25,7 @@ export default function Jogo(props) {
         >
           Escolher Palavra
         </button>
-        <p>{props.palavra.join(' ')}</p>
+        <p className={props.ganhou}>{props.palavra.join(' ')}</p>
       </div>
     </div>
   );

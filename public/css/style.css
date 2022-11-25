@@ -118,3 +118,11 @@ main {
   text-align: center;
   border: none;
 }
+
+.perdeu{
+  color: #FF0000;
+}
+
+.ganhou{
+  color: #27AE60;
+}

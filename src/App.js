@@ -13,6 +13,9 @@ function App() {
   const [letrasClicadas, setLetrasClicadas] = React.useState([]);
   const [contadorErro, setContadorErro] = React.useState(0);
   const [disable, setDisable] = React.useState(true);
+  const [endGame, setEndGame] = React.useState(false);
+  const [ganhou, setGanhou] = React.useState('');
+
 
   return (
     <main>
@@ -25,10 +28,12 @@ function App() {
         palavraSorteada={palavraSorteada}
         contadorErro = {contadorErro}
         setDisable = {setDisable}
+        ganhou={ganhou}
       />
       <Letras
         arrayResposta={arrayResposta}
         letraEstado={letraEstado}
+        setLetraEstado={setLetraEstado}
         palavra={palavra}
         setPalavra={setPalavra}
         palavraSorteada={palavraSorteada}
@@ -37,7 +42,10 @@ function App() {
         setContadorErro={setContadorErro}
         contadorErro = {contadorErro}
         disable ={disable}
-        
+        endGame={endGame}
+        setEndGame={setEndGame}
+        setDisable = {setDisable}
+        setGanhou={setGanhou}
       />
       <Chute />
     </main>
