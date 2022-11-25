@@ -13,6 +13,12 @@ function clickLetra(key){
     indexArr.map(item => palavraAux[item]=key)
     props.setPalavra(palavraAux)
     console.log(palavraAux)
+    if (!palavraAux.includes('_')){
+      props.setGanhou('ganhou')
+      props.setLetraEstado('disabled')
+      props.setDisable(true)
+      props.setEndGame(true)
+    }
   } else {
     let novoContador = props.contadorErro +1
     props.setContadorErro(novoContador)
@@ -25,7 +31,7 @@ function clickLetra(key){
     }
   }
 }
-// console.log(props.arrayResposta)
+
   return (
     <div className="bottom">
       <div className="letters">

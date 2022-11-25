@@ -1,5 +1,17 @@
 export default function Jogo(props) {
+  const clearState = () => {
+    props.setPalavra([])
+    props.setLetraEstado("disabled")
+    props.setPalavraSorteada("")
+    props.setDisable(true)
+    props.setLetrasClicadas([])
+    props.setContadorErro(0)
+    props.setEndGame(false)
+    props.setGanhou('')
+}
+  
   function escolhePalavra(array) {
+    clearState()
     let randomElement = array[Math.floor(Math.random() * array.length)];
     props.setPalavraSorteada(randomElement.split(""));
     let numChar = randomElement.length;
@@ -7,6 +19,7 @@ export default function Jogo(props) {
     props.setPalavra(palavraArray);
     props.setLetraEstado("");
     props.setDisable(false)
+
   }
   
   console.log(props.palavraSorteada);

@@ -9,7 +9,6 @@ function App() {
   const [palavraSorteada, setPalavraSorteada] = React.useState("");
   const [palavra, setPalavra] = React.useState([]);
   const [letraEstado, setLetraEstado] = React.useState("disabled");
-  const [arrayResposta, setArrayResposta] = React.useState([]);
   const [letrasClicadas, setLetrasClicadas] = React.useState([]);
   const [contadorErro, setContadorErro] = React.useState(0);
   const [disable, setDisable] = React.useState(true);
@@ -22,16 +21,20 @@ function App() {
       <Jogo
         palavrasArr={palavras}
         palavra={palavra}
+        palavraSorteada={palavraSorteada}
+        contadorErro = {contadorErro}
+        ganhou={ganhou}
+        endGame={endGame}
         setPalavra={setPalavra}
         setLetraEstado={setLetraEstado}
         setPalavraSorteada={setPalavraSorteada}
-        palavraSorteada={palavraSorteada}
-        contadorErro = {contadorErro}
         setDisable = {setDisable}
-        ganhou={ganhou}
+        setLetrasClicadas={setLetrasClicadas}
+        setContadorErro={setContadorErro}
+        setEndGame={setEndGame}
+        setGanhou={setGanhou}
       />
       <Letras
-        arrayResposta={arrayResposta}
         letraEstado={letraEstado}
         setLetraEstado={setLetraEstado}
         palavra={palavra}
@@ -42,7 +45,6 @@ function App() {
         setContadorErro={setContadorErro}
         contadorErro = {contadorErro}
         disable ={disable}
-        endGame={endGame}
         setEndGame={setEndGame}
         setDisable = {setDisable}
         setGanhou={setGanhou}
