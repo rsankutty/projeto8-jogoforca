@@ -42,7 +42,11 @@ export default function Jogo(props) {
         >
           Escolher Palavra
         </button>
-        <p data-test="word" className={props.ganhou}>
+        <p
+          data-test="word"
+          data-answer={props.palavraSorteada.join(" ")}
+          className={props.ganhou}
+        >
           {props.palavra.join(" ")}
         </p>
       </div>
