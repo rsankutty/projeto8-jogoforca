@@ -1,30 +1,33 @@
 export default function Jogo(props) {
   const clearState = () => {
-    props.setPalavra([])
-    props.setLetraEstado("disabled")
-    props.setPalavraSorteada("")
-    props.setDisable(true)
-    props.setLetrasClicadas([])
-    props.setContadorErro(0)
-    props.setEndGame(false)
-    props.setGanhou('')
-}
-  
+    if (props.endGame){
+      window.location.reload()
+    } else{
+      props.setPalavra([]);
+    props.setLetraEstado("disabled");
+    props.setPalavraSorteada("");
+    props.setDisable(true);
+    props.setLetrasClicadas([]);
+    props.setContadorErro(0);
+    props.setEndGame(false);
+    props.setGanhou("");
+    props.setChute("");
+    }
+  };
+
   function escolhePalavra(array) {
-    clearState()
+    clearState();
     let randomElement = array[Math.floor(Math.random() * array.length)];
     props.setPalavraSorteada(randomElement.split(""));
     let numChar = randomElement.length;
     let palavraArray = Array(numChar).fill("_");
     props.setPalavra(palavraArray);
     props.setLetraEstado("");
-    props.setDisable(false)
-
+    props.setDisable(false);
+    console.log(randomElement);
   }
-  
-  console.log(props.palavraSorteada);
-  console.log(props.palavra);
-  let imgString = `assets/forca${props.contadorErro}.png`
+
+  let imgString = `assets/forca${props.contadorErro}.png`;
 
   return (
     <div className="top">
@@ -38,7 +41,7 @@ export default function Jogo(props) {
         >
           Escolher Palavra
         </button>
-        <p className={props.ganhou}>{props.palavra.join(' ')}</p>
+        <p className={props.ganhou}>{props.palavra.join(" ")}</p>
       </div>
     </div>
   );

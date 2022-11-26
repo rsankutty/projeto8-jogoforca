@@ -13,8 +13,8 @@ function App() {
   const [contadorErro, setContadorErro] = React.useState(0);
   const [disable, setDisable] = React.useState(true);
   const [endGame, setEndGame] = React.useState(false);
-  const [ganhou, setGanhou] = React.useState('');
-
+  const [ganhou, setGanhou] = React.useState("");
+  const [chute, setChute] = React.useState("");
 
   return (
     <main>
@@ -22,17 +22,18 @@ function App() {
         palavrasArr={palavras}
         palavra={palavra}
         palavraSorteada={palavraSorteada}
-        contadorErro = {contadorErro}
+        contadorErro={contadorErro}
         ganhou={ganhou}
         endGame={endGame}
         setPalavra={setPalavra}
         setLetraEstado={setLetraEstado}
         setPalavraSorteada={setPalavraSorteada}
-        setDisable = {setDisable}
+        setDisable={setDisable}
         setLetrasClicadas={setLetrasClicadas}
         setContadorErro={setContadorErro}
         setEndGame={setEndGame}
         setGanhou={setGanhou}
+        setChute={setChute}
       />
       <Letras
         letraEstado={letraEstado}
@@ -43,13 +44,24 @@ function App() {
         letrasClicadas={letrasClicadas}
         setLetrasClicadas={setLetrasClicadas}
         setContadorErro={setContadorErro}
-        contadorErro = {contadorErro}
-        disable ={disable}
+        contadorErro={contadorErro}
+        disable={disable}
         setEndGame={setEndGame}
-        setDisable = {setDisable}
+        setDisable={setDisable}
         setGanhou={setGanhou}
       />
-      <Chute />
+      <Chute
+        chute={chute}
+        setChute={setChute}
+        setGanhou={setGanhou}
+        palavraSorteada={palavraSorteada}
+        setPalavra={setPalavra}
+        setLetraEstado={setLetraEstado}
+        setDisable={setDisable}
+        setEndGame={setEndGame}
+        setContadorErro={setContadorErro}
+        disable={disable}
+      />
     </main>
   );
 }
