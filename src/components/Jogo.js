@@ -1,8 +1,5 @@
 export default function Jogo(props) {
   const clearState = () => {
-    if (props.endGame) {
-      window.location.reload();
-    } else {
       props.setPalavra([]);
       props.setLetraEstado("disabled");
       props.setPalavraSorteada("");
@@ -13,7 +10,6 @@ export default function Jogo(props) {
       props.setGanhou("");
       props.setChute("");
       props.setDataTest("");
-    }
   };
 
   function escolhePalavra(array) {
