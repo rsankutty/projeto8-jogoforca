@@ -12,6 +12,7 @@ export default function Jogo(props) {
       props.setEndGame(false);
       props.setGanhou("");
       props.setChute("");
+      props.setDataTest("");
     }
   };
 
@@ -25,6 +26,7 @@ export default function Jogo(props) {
     props.setLetraEstado("");
     props.setDisable(false);
     console.log(randomElement);
+    props.setDataTest(randomElement)
   }
 
   let imgString = `assets/forca${props.contadorErro}.png`;
@@ -32,7 +34,7 @@ export default function Jogo(props) {
   return (
     <div className="top">
       <div className="img-forca">
-        <img data-test="game-image" src={imgString}></img>
+        <img data-test="game-image" src={imgString} alt=""></img>
       </div>
       <div className="top-right">
         <button
@@ -44,7 +46,7 @@ export default function Jogo(props) {
         </button>
         <p
           data-test="word"
-          data-answer={props.palavraSorteada.join(" ")}
+          data-answer={props.dataTest}
           className={props.ganhou}
         >
           {props.palavra.join(" ")}

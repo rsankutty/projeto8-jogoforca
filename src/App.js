@@ -15,10 +15,13 @@ function App() {
   const [endGame, setEndGame] = React.useState(false);
   const [ganhou, setGanhou] = React.useState("");
   const [chute, setChute] = React.useState("");
+  const [dataTest, setDataTest] = React.useState("");
 
   return (
     <main>
       <Jogo
+        dataTest={dataTest}
+        setDataTest={setDataTest}
         palavrasArr={palavras}
         palavra={palavra}
         palavraSorteada={palavraSorteada}

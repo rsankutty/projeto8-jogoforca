@@ -2,7 +2,7 @@ export default function Chute(props) {
   function chuteInput(chute, arrPalavra) {
     let palavra = arrPalavra.join("");
     console.log(palavra);
-    if (palavra == chute) {
+    if (palavra === chute) {
       props.setGanhou("ganhou");
       props.setPalavra(props.palavraSorteada);
       props.setLetraEstado("disabled");

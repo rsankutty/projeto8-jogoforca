@@ -6,7 +6,7 @@ export default function Letras(props) {
     if (props.palavraSorteada.includes(key)) {
       let indexArr = [];
       props.palavraSorteada.map((item, index) =>
-        item == key ? indexArr.push(index) : ""
+        item === key ? indexArr.push(index) : ""
       );
       let palavraAux = [...props.palavra];
       indexArr.map((item) => (palavraAux[item] = key));
@@ -20,7 +20,7 @@ export default function Letras(props) {
     } else {
       let novoContador = props.contadorErro + 1;
       props.setContadorErro(novoContador);
-      if (novoContador == 6) {
+      if (novoContador === 6) {
         props.setEndGame(true);
         props.setDisable(true);
         props.setPalavra(props.palavraSorteada);
