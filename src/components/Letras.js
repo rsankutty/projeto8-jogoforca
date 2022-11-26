@@ -1,33 +1,6 @@
 export default function Letras(props) {
-  const alfabeto = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-
+  const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  
   function clickLetra(key) {
     props.setLetrasClicadas([...props.letrasClicadas, key]);
     if (props.palavraSorteada.includes(key)) {
@@ -62,6 +35,7 @@ export default function Letras(props) {
       <div className="letters">
         {alfabeto.map((item) => (
           <button
+            data-test="letter"
             disabled={
               props.letrasClicadas.includes(item) ? true : props.disable
             }

@@ -1,17 +1,17 @@
 export default function Jogo(props) {
   const clearState = () => {
-    if (props.endGame){
-      window.location.reload()
-    } else{
+    if (props.endGame) {
+      window.location.reload();
+    } else {
       props.setPalavra([]);
-    props.setLetraEstado("disabled");
-    props.setPalavraSorteada("");
-    props.setDisable(true);
-    props.setLetrasClicadas([]);
-    props.setContadorErro(0);
-    props.setEndGame(false);
-    props.setGanhou("");
-    props.setChute("");
+      props.setLetraEstado("disabled");
+      props.setPalavraSorteada("");
+      props.setDisable(true);
+      props.setLetrasClicadas([]);
+      props.setContadorErro(0);
+      props.setEndGame(false);
+      props.setGanhou("");
+      props.setChute("");
     }
   };
 
@@ -32,16 +32,19 @@ export default function Jogo(props) {
   return (
     <div className="top">
       <div className="img-forca">
-        <img src={imgString}></img>
+        <img data-test="game-image" src={imgString}></img>
       </div>
       <div className="top-right">
         <button
+          data-test="choose-word"
           onClick={() => escolhePalavra(props.palavrasArr)}
           className="botao-palavra"
         >
           Escolher Palavra
         </button>
-        <p className={props.ganhou}>{props.palavra.join(" ")}</p>
+        <p data-test="word" className={props.ganhou}>
+          {props.palavra.join(" ")}
+        </p>
       </div>
     </div>
   );
