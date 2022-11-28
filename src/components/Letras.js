@@ -15,13 +15,11 @@ export default function Letras(props) {
         props.setGanhou("ganhou");
         props.setLetraEstado("disabled");
         props.setDisable(true);
-        props.setEndGame(true);
       }
     } else {
       let novoContador = props.contadorErro + 1;
       props.setContadorErro(novoContador);
       if (novoContador === 6) {
-        props.setEndGame(true);
         props.setDisable(true);
         props.setPalavra(props.palavraSorteada);
         props.setLetraEstado("disabled");

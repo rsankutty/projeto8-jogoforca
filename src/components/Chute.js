@@ -7,11 +7,9 @@ export default function Chute(props) {
       props.setPalavra(props.palavraSorteada);
       props.setLetraEstado("disabled");
       props.setDisable(true);
-      props.setEndGame(true);
       props.setChute("");
     } else {
       props.setGanhou("perdeu");
-      props.setEndGame(true);
       props.setDisable(true);
       props.setPalavra(props.palavraSorteada);
       props.setLetraEstado("disabled");

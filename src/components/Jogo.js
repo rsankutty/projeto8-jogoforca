@@ -6,7 +6,6 @@ export default function Jogo(props) {
       props.setDisable(true);
       props.setLetrasClicadas([]);
       props.setContadorErro(0);
-      props.setEndGame(false);
       props.setGanhou("");
       props.setChute("");
       props.setDataTest("");

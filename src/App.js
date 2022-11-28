@@ -12,7 +12,6 @@ function App() {
   const [letrasClicadas, setLetrasClicadas] = React.useState([]);
   const [contadorErro, setContadorErro] = React.useState(0);
   const [disable, setDisable] = React.useState(true);
-  const [endGame, setEndGame] = React.useState(false);
   const [ganhou, setGanhou] = React.useState("");
   const [chute, setChute] = React.useState("");
   const [dataTest, setDataTest] = React.useState("");
@@ -21,49 +20,45 @@ function App() {
     <main>
       <Jogo
         dataTest={dataTest}
-        setDataTest={setDataTest}
         palavrasArr={palavras}
         palavra={palavra}
         palavraSorteada={palavraSorteada}
         contadorErro={contadorErro}
         ganhou={ganhou}
-        endGame={endGame}
+        setDataTest={setDataTest}
         setPalavra={setPalavra}
         setLetraEstado={setLetraEstado}
         setPalavraSorteada={setPalavraSorteada}
         setDisable={setDisable}
         setLetrasClicadas={setLetrasClicadas}
         setContadorErro={setContadorErro}
-        setEndGame={setEndGame}
         setGanhou={setGanhou}
         setChute={setChute}
       />
       <Letras
         letraEstado={letraEstado}
-        setLetraEstado={setLetraEstado}
         palavra={palavra}
-        setPalavra={setPalavra}
         palavraSorteada={palavraSorteada}
         letrasClicadas={letrasClicadas}
-        setLetrasClicadas={setLetrasClicadas}
-        setContadorErro={setContadorErro}
         contadorErro={contadorErro}
         disable={disable}
-        setEndGame={setEndGame}
+        setLetraEstado={setLetraEstado}
+        setPalavra={setPalavra}
+        setLetrasClicadas={setLetrasClicadas}
+        setContadorErro={setContadorErro}
         setDisable={setDisable}
         setGanhou={setGanhou}
       />
       <Chute
         chute={chute}
+        disable={disable}
+        palavraSorteada={palavraSorteada}
         setChute={setChute}
         setGanhou={setGanhou}
-        palavraSorteada={palavraSorteada}
         setPalavra={setPalavra}
         setLetraEstado={setLetraEstado}
         setDisable={setDisable}
-        setEndGame={setEndGame}
         setContadorErro={setContadorErro}
-        disable={disable}
       />
     </main>
   );
